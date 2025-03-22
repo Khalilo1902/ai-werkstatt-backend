@@ -1,5 +1,5 @@
 import AsyncHandler from "express-async-handler";
-import Content from '../model/ContentSchema';
+import Content from '../model/contentSchema';
 import { Response,Request } from "express";
 
 

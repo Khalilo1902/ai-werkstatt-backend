@@ -1,7 +1,7 @@
 import asyncHandler from "express-async-handler";
 import { Request, Response } from "express";
 import transporter from "./nodemailer/transporter";
-import Contact from "../model/ContactSchema";
+import Contact from "../model/contactSchema";
 
 export const postContact = asyncHandler(async (req: Request, res: Response) => {
   const { name, workshopName, phone, email, postalCode, agreedToPrivacyPolicy } = req.body;

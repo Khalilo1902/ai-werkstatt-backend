@@ -1,5 +1,5 @@
 import express from "express"
-import { createContent, getAllContent } from "../controller/ContentController"
+import { createContent, getAllContent } from "../controller/contentController"
 
 const ContentRouter = express.Router()
 
