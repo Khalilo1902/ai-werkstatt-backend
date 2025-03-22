@@ -1,14 +1,14 @@
 import express from "express"
 import { createContent, getAllContent } from "../controller/ContentController"
 
-const contentRouter = express.Router()
+const ContentRouter = express.Router()
 
 
-contentRouter.post("/api/content/create",createContent)
-contentRouter.get("/api/content/get-content",getAllContent)
+ContentRouter.post("/api/content/create",createContent)
+ContentRouter.get("/api/content/get-content",getAllContent)
 
 
 
 
 
-export default contentRouter
+export default ContentRouter

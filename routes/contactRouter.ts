@@ -1,16 +1,13 @@
-
 import express from "express"
-import { postContact } from "../controller/contactController"
+import { postContact } from "../controller/ContactController"
+ 
 
+const ContactRouter = express.Router()
 
-
-
-const contactRouter = express.Router()
-
-contactRouter.post("/api/send",postContact)
+ContactRouter.post("/api/send",postContact)
 
 
 
 
 
-export default contactRouter
+export default ContactRouter

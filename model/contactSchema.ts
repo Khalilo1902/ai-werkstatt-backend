@@ -40,4 +40,4 @@ const contactSchema = new mongoose.Schema({
 
 
 
-export default  mongoose.model('Consultation', contactSchema);;
+export default  mongoose.model('Contact', contactSchema);;
