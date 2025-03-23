@@ -3,8 +3,8 @@ import cors from "cors"
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import dbConnect from "./config/db_Connect";
-import ContentRouter from "./routes/contentRouter";
 import ContactRouter from "./routes/contactRouter";
+import contentRouter from "./routes/ContentRouter";
 
 
 dotenv.config()
@@ -19,7 +19,7 @@ app.use(cors({
   credentials: true,
 }));
 app.use(cookieParser());
-app.use(ContentRouter)
+app.use(contentRouter)
 app.use("/contact",ContactRouter)
 
 const PORT = process.env.PORT || 7060
