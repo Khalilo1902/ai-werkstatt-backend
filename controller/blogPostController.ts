@@ -5,8 +5,7 @@ import asyncHandler from "express-async-handler";
  const createBlogPost = asyncHandler (async (req:Request, res:Response) => {
     try {
       const { title, description, date, fullContent } = req.body;
-      const image = req.file ? req.file.path : "";
-        
+      const image = req.file ? `/uploads/${req.file.filename}` : "";        
       const newBlogPost = new BlogPost({
         title,
         description,
@@ -32,8 +31,7 @@ import asyncHandler from "express-async-handler";
     try {
       const { id } = req.params; 
       const { title, description, date,  fullContent } = req.body;
-      const image = req.file ? req.file.path : "";
-      
+      const image = req.file ? `/uploads/${req.file.filename}` : "";      
       const updatedBlogPost = await BlogPost.findByIdAndUpdate(
         id,
         { title, description, date, image, fullContent },

@@ -23,5 +23,5 @@ const blogPostSchema = new mongoose.Schema({
     },
   });
   
-  // Create the BlogPost model
+
 export default mongoose.model('BlogPost', blogPostSchema)

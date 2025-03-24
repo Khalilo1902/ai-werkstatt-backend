@@ -26,6 +26,8 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(contentRouter)
 app.use("/contact",contactRouter)
 app.use(blogPostRouter)
+const uploadsPath = path.join(__dirname, 'uploads');
+console.log(`Uploads are served from: ${uploadsPath}`);
 
 const PORT = process.env.PORT || 7060
 
