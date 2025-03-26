@@ -11,7 +11,6 @@ import path from "path";
 
 dotenv.config()
 dbConnect()
-
 const app = express()
 
 
@@ -22,13 +21,15 @@ app.use(cors({
 }));
 app.use(cookieParser());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+app.use('/uploads/optimized', express.static(path.join(__dirname, 'uploads', 'optimized')));
+
 
 app.use(contentRouter)
 app.use("/contact",contactRouter)
 app.use(blogPostRouter)
 const uploadsPath = path.join(__dirname, 'uploads');
 console.log(`Uploads are served from: ${uploadsPath}`);
-
+console.log('Serving static files from:', path.join(__dirname, 'uploads', 'optimized'));
 const PORT = process.env.PORT || 7060
 
 app.listen(PORT,()=>{
